@@ -1,0 +1,15 @@
+#!/bin/bash
+
+git add .
+git status
+echo -n "Is it all there? (Y/N): "
+read -n 1 answer
+if [ "$answer" == "y" ]; then
+	now=$(date)
+	echo "Pushing commit for: $now"
+	git commit -m "$now"
+	git push origin master
+else
+	echo "Nice try though"
+	echo "See Ya!"
+fi 
