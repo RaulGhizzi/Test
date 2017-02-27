@@ -3,7 +3,8 @@
 echo -n "Enter a letter: "
 read -n 1 answer
 if [ "$answer" == "y" ]; then
-	echo "$answer"
+	now=$(date +%d-%m-%Y)
+	echo "$now"
 else
 	echo "Next time"
 fi

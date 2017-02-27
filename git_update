@@ -5,7 +5,7 @@ git status
 echo -n "Is it all there? (Y/N): "
 read -n 1 answer
 if [ "$answer" == "y" ]; then
-	now=$(date)
+	now=$(date +%d-%m-%Y)
 	echo "Pushing commit for: $now"
 	git commit -m "$now"
 	git push origin master
