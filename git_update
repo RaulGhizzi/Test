@@ -2,13 +2,13 @@
 
 git add .
 git status
-echo -n "Is it all there? (Y/N): "
+echo "Is it all there? (Y/N): "
 read -n 1 -s answer
 if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
-	echo -n "Send custom commit msg? (Y/N)"
+	echo "Send custom commit msg? (Y/N)"
 	read -n 1 -s msg_flag
 	if [ "$msg_flag" == "y" ] || [ "$msg_flag" == "Y" ]; then
-		echo -n "Enter message: "
+		echo "Enter message: "
 		read message
 		echo "Pushing commit: $message"
 		git commit -m "$message"
